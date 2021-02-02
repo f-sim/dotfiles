@@ -16,4 +16,9 @@ fi
 
 ln -s $dotfiles_path/.oh-my-zsh $HOME/.oh-my-zsh
 
-if [ -e "$HOME/.zshrc
+if [ -e "$HOME/.zshrc" ]; then
+  echo "  Backup existing .zshrc"
+  mv $HOME/.zshrc $HOME/.zshrc.bak
+fi
+
+ln -s $dotfiles_path/.zshrc $HOME/.zshrc
