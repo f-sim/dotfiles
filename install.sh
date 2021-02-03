@@ -36,3 +36,17 @@ fi
 
 ln -s $dotfiles_path/.pyenv $HOME/.pyenv
 
+echo "Install nvim ..."
+if [ -d "${XDG_DATA_HOME:-$HOME/.local/share}/nvim/" ]; then
+  echo "Backup nvim configuration"
+  mv "${XDG_DATA_HOME:-$HOME/.local/share}/nvim/" "${XDG_DATA_HOME:-$HOME/.local/share}/nvim.bak"
+fi
+
+if [ -L "${XDG_DATA_HOME:-$HOME/.local/share}/nvim/" ]; then
+  echo "Remove nvim link"
+  rm -f ${XDG_DATA_HOME:-$HOME/.local/share}/nvim/
+fi
+mkdir -p ${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/autoload/
+ln -s $dotfiles_path/vim-plug/plug.vim ${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/autoload/plug.vim
+
+
