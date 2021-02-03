@@ -22,3 +22,17 @@ if [ -e "$HOME/.zshrc" ]; then
 fi
 
 ln -s $dotfiles_path/.zshrc $HOME/.zshrc
+
+echo "Install pyenv ..."
+if [ -d "$HOME/.pyenv" ]; then
+  echo "  Backup existing .pyenv installation"
+  mv $HOME/.pyenv $HOME/.pyenv.back
+fi
+
+if [ -L "$HOME/.pyenv" ]; then
+  echo "  Remove existing link"
+  rm -f $HOME/.pyenv
+fi
+
+ln -s $dotfiles_path/.pyenv $HOME/.pyenv
+
