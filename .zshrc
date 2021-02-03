@@ -103,3 +103,5 @@ source $ZSH/oh-my-zsh.sh
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
+alias reloadzsh=". $HOME/.zshrc"
+
