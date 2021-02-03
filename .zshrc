@@ -105,3 +105,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 alias reloadzsh=". $HOME/.zshrc"
 
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
