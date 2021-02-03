@@ -12,4 +12,5 @@ set number
 set termguicolors
 set background=dark
 colorscheme NeoSolarized
+filetype plugin indent on
 
