@@ -30,3 +30,12 @@ map q: :q
 
 let g:airline_theme='solarized'
 
+nmap <leader>tw :%s/\s\+$//e<CR>
+
+nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>ev :e $MYVIMRC<CR>
+
+" add yaml stuffs
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
