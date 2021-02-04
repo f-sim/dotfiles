@@ -4,3 +4,6 @@
 [submodule ".pyenv"]
 	path = .pyenv
 	url = https://github.com/pyenv/pyenv.git
+[submodule "vim-plug"]
+	path = vim-plug
+	url = https://github.com/junegunn/vim-plug
