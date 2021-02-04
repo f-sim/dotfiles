@@ -56,3 +56,8 @@ fi
 
 ln -s $dotfiles_path/nvim $HOME/.config/nvim
 
+echo "Install vim ..."
+ln -s $dotfiles_path/.vim $HOME/.vim
+ln -s $dotfiles_path/vim-plug/plug.vim $HOME/.vim/autoload/plug.vim
+ln -s $dotfiles_path/.vimrc $HOME/.vimrc
+
