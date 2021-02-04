@@ -8,6 +8,8 @@ Plug 'overcache/NeoSolarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'skanehira/docker-compose.vim'
+
 call plug#end()
 
 " General configuration
@@ -27,4 +29,11 @@ imap jj <ESC>l
 map q: :q
 
 let g:airline_theme='solarized'
+
+nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>ev :e $MYVIMRC<CR>
+
+" add yaml stuffs
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
